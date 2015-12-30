@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Pop Manager - By Atto</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/image-picker.css" rel="stylesheet">
@@ -22,6 +23,20 @@
   Launch demo modal
 </button>
       
+=======
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/image-picker.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.vertical-tabs.min.css">
+	<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/enyo/dropzone/master/dist/dropzone.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body onload="viewdata(); selectdata();">
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog  modal-lg" role="document">
@@ -68,6 +83,10 @@
 	            			<div class="col-xs-4 row" style="max-height: 300px" id="selectdata">                       
 
                         
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
                           
                     </div>
             			</div>
@@ -99,14 +118,20 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+=======
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
 <script src="js/image-picker.min.js"></script>
 <script>
 	jQuery("select.image-picker").imagepicker({
   	hide_select:  true,
 	});
 </script>
+<<<<<<< HEAD
 <script src="js/dropzone.js"></script>
 <script>
 function tooltip(){
@@ -128,6 +153,22 @@ function tooltip(){
         });
     }
 </script>
+=======
+<script src="https://raw.github.com/enyo/dropzone/master/dist/dropzone.js"></script>
+<script>
+    function viewdata(){
+      
+    $.ajax({
+	   type: "GET",
+	   url: "php/getdata.php",
+	   dataType: "html"
+      }).done(function( data ) {
+	  $('#viewdata').html(data);
+	  $("select").imagepicker();
+      });
+    }
+
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
 </script>
 
 <script>
@@ -135,11 +176,19 @@ function tooltip(){
  Dropzone.options.myDropzone = {
   init: function() {
     this.on("success", function(file, responseText) {
+<<<<<<< HEAD
       onload("viewdata(1)");
       onload("showImages(<?php echo $row['id'];?>);");
     });
   }
 };
+=======
+      onload('viewdata');
+    });
+  }
+};
+
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
 </script>
 
 <script>
@@ -150,11 +199,15 @@ function showImages(val) {
   data:'id='+val,
   success: function(data){
     $("#selectdata").html(data);
+<<<<<<< HEAD
     tooltip();
+=======
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
   }
   });
 }
 </script>
+<<<<<<< HEAD
 <script>
   function deleteData(val){
 
@@ -219,3 +272,8 @@ function showImages(val) {
 </script>
 </body>
 </html>
+=======
+
+</body>
+</html>
+>>>>>>> b3f353a2ab5d0094016fa1d7326362c74ca08d51
