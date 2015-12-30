@@ -1,0 +1,33 @@
+.modal-content {
+	border-radius: 0px;
+}
+.modal-lg {
+    width: auto;
+    margin: 25px;
+}
+
+.upload {
+	width: 100%;
+	border: 2px dashed rgb(221, 221, 221) !important;
+	min-height: 400px !important;
+}
+.image_picker_image {
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+.image-selector, .link {
+	min-height: 400px;
+}
+.img-small {
+	width: 220px;
+	margin-bottom: 5px;
+}
+.attachment-details {
+	text-align: center;
+}
+.dz-message{
+	position: absolute;
+	bottom: 50%;
+	left: 40%;
+}
